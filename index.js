@@ -1,11 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle navigation menu on smaller screens
     const navLinks = document.querySelector('.nav__links');
     const toggleNav = () => navLinks.classList.toggle('active');
 
     document.querySelector('.nav__icons').addEventListener('click', toggleNav);
-
-    // Implementing expandable categories (example structure, adapt as needed)
     const categories = [
         { name: 'Men', subcategories: ['Top wear', 'Bottom Wear', 'Flip-Flops'] },
         { name: 'Women', subcategories: ['Top wear', 'Bottom Wear', 'Flip-Flops'] },
@@ -43,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     createCategoryList();
 
-    // Toggle subcategories on click
     document.querySelectorAll('.category-name').forEach(item => {
         item.addEventListener('click', () => {
             const subCategoryList = item.nextElementSibling;
@@ -57,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const searchQuery = prompt('Enter your search query:');
         if (searchQuery) {
             alert(`Searching for: ${searchQuery}`);
-            // Implement actual search functionality here
+            
         }
     });
 });
